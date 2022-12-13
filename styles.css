@@ -1,0 +1,170 @@
+/* підключення шрифтів */
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+/* налаштування видимої частини вікна браузера */
+body {
+  padding: 0;
+  margin: 0;
+  background: #e9f5fa;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Krona One", sans-serif;
+}
+
+/* налаштування блоків з наорами свг-графіки */
+body > svg {
+  position: absolute;
+}
+
+/* налаштування основного контейнеру */
+.wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* налаштування одного елемента-дня */
+.day {
+  color: #4db0d3;
+  text-align: center;
+}
+
+/* налаштування елемента з днем тижня */
+.day-of-week {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* налаштування елемента з числом місяця */
+.date {
+  font-size: 4.5rem;
+}
+
+/* група окремих характеристик з оголошенням змінних */
+.cloudy {
+  --backColor: #4db0d3;
+  --temperature: #e6df95;
+  --content: #d3ebf4;
+}
+
+.sunny {
+  --backColor: #e6df95;
+  --temperature: #4db0d3;
+  --content: #247490;
+}
+
+.stormy {
+  --backColor: #0e2e3a;
+  --temperature: #e6df95;
+  --content: #d3ebf4;
+}
+
+.snowy {
+  --backColor: #bce1ef;
+  --temperature: #0e2e3a;
+  --content: #247490;
+}
+
+.partly-cloudy {
+  --backColor: #2b8bad;
+  --temperature: #e6df95;
+  --content: #d3ebf4;
+}
+
+.rainy {
+  --backColor: #4db0d3;
+  --temperature: #e6df95;
+  --content: #d3ebf4;
+}
+
+/* загальні налаштування одного стовпчика */
+.bar {
+  background: var(--backColor);
+  min-height: 550px;
+  border-radius: 50px;
+  position: relative;
+  width: 165px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    11px 4px 34px rgba(32, 77, 92, 0.7);
+  padding-top: 200px;
+  box-sizing: border-box;
+}
+
+/* абсолютне позиціонування для свг-елементів, що вкладені в кожен стовпчик */
+.weather svg {
+  position: absolute;
+}
+
+/* конкретні позиції для свг-елементів, що вкладені в різні стовпчики */
+.cloudy .weather svg {
+  top: 75px;
+  left: -25px;
+}
+
+.sunny .weather svg {
+  top: 20px;
+  left: -20px;
+}
+
+.stormy .weather svg {
+  top: 35px;
+  left: -23px;
+}
+
+.snowy .weather svg {
+  top: 20px;
+  left: -25px;
+}
+
+.partly-cloudy .weather svg {
+  top: 20px;
+  left: -15px;
+}
+
+.rainy .weather svg {
+  top: -15px;
+  left: 30px;
+}
+
+/* налаштування значення температури */
+.temperature {
+  font-family: "Oswald", sans-serif;
+  color: var(--temperature);
+  font-size: 6.875rem;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+/* налаштування знака градусів */
+.degrees {
+  position: absolute;
+  font-size: 3rem;
+  top: 20px;
+}
+
+/* налаштування показників погоди (підключення свг-піктограм та текст) */
+.content {
+  color: var(--content);
+  fill: currentColor;
+}
+
+.icon {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  position: relative;
+  top: 10px;
+}
+
+.precipitation {
+  margin-bottom: 10px;
+}
+
+.low .icon {
+  left: -3px;
+  position: relative;
+  margin-right: -5px;
+}
