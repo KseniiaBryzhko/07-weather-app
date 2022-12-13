@@ -1,2 +1,2 @@
-# weather-app
+# 07-weather-app
 training course
